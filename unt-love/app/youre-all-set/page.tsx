@@ -65,27 +65,27 @@ export default function YoureAllSetPage() {
     <div className="relative min-h-screen bg-white">
       <FloatingHeartsBackground />
       
-      <main className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-12">
+      <main className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
         <div 
-          className={`w-full max-w-2xl transition-all duration-500 ease-out ${
+          className={`w-full max-w-sm sm:max-w-2xl transition-all duration-500 ease-out ${
             showContent 
               ? "opacity-100 scale-100 translate-y-0" 
               : "opacity-0 scale-95 translate-y-4"
           }`}
         >
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-zinc-200/50 p-8 shadow-xl text-center">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-zinc-200/50 p-4 sm:p-8 shadow-xl text-center">
             {/* Header */}
-            <div className="mb-8">
-              <h1 className="text-4xl font-bold text-zinc-900 mb-3">You&apos;re In.</h1>
-              <p className="text-lg text-zinc-600">
+            <div className="mb-6 sm:mb-8">
+              <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-2 sm:mb-3">You&apos;re In.</h1>
+              <p className="text-base sm:text-lg text-zinc-600">
                 We&apos;ll email you when we find a strong match at UNT.
               </p>
             </div>
 
             {/* Section 1: What Happens Next */}
-            <div className="mb-8 text-left">
-              <h2 className="text-xl font-semibold text-zinc-900 mb-4">What Happens Next</h2>
-              <ul className="space-y-3 text-zinc-700">
+            <div className="mb-6 sm:mb-8 text-left">
+              <h2 className="text-lg sm:text-xl font-semibold text-zinc-900 mb-3 sm:mb-4">What Happens Next</h2>
+              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-zinc-700">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-[#E85A50] rounded-full mt-2 shrink-0"></span>
                   <span>We analyze compatibility based on your preferences.</span>
@@ -102,8 +102,8 @@ export default function YoureAllSetPage() {
             </div>
 
             {/* Contact Section */}
-            <div className="mb-8 text-center">
-              <p className="text-sm text-zinc-600">
+            <div className="mb-6 sm:mb-8 text-center">
+              <p className="text-xs sm:text-sm text-zinc-600">
                 Questions?{" "}
                 <a 
                   href="https://www.instagram.com/tenbuilt/" 
@@ -117,19 +117,19 @@ export default function YoureAllSetPage() {
             </div>
 
             {/* Section 2: Increase Your Options */}
-            <div className="mb-8">
-              <h2 className="text-xl font-semibold text-zinc-900 mb-2">Want More Matches?</h2>
-              <p className="text-zinc-600 mb-6">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-lg sm:text-xl font-semibold text-zinc-900 mb-2">Want More Matches?</h2>
+              <p className="text-sm sm:text-base text-zinc-600 mb-4 sm:mb-6">
                 Invite others to join UNT-Love and increase your match pool.
               </p>
               <Button
                 onClick={handleShare}
-                className="w-full mb-3"
+                className="w-full mb-2 sm:mb-3"
                 disabled={shareStatus === "success"}
               >
                 {shareStatus === "success" ? "Link Copied!" : "Share UNT-Love"}
               </Button>
-              <p className="text-sm text-zinc-500">
+              <p className="text-xs sm:text-sm text-zinc-500">
                 More students = more options for you.
               </p>
               
